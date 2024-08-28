@@ -2,6 +2,23 @@
 
 [![NPM version](https://img.shields.io/npm/v/unplugin-cesium?color=a1b858&label=)](https://www.npmjs.com/package/unplugin-cesium)
 
+Cesium template for [unplugin](https://github.com/unjs/unplugin).
+
+## Template Usage
+
+To use this template, clone it down using:
+
+```bash
+npx degit unplugin/unplugin-cesium my-unplugin
+```
+
+And do a global replacement of `unplugin-cesium` with your plugin name.
+
+Then you can start developing your unplugin 🔥
+
+To test your plugin, run: `pnpm run dev`
+To release a new version, run: `pnpm run release`
+
 ## Install
 
 ```bash
@@ -13,19 +30,16 @@ npm i unplugin-cesium
 
 ```ts
 // vite.config.ts
-import copy from 'unplugin-cesium/vite'
+import Cesium from 'unplugin-cesium/vite'
 
 export default defineConfig({
   plugins: [
-    copy({
-      src: './node_modules/vue/dist/*',
-      dest: 'vue'
-    }),
+    Cesium({ /* options */ }),
   ],
 })
 ```
 
-Example: [`example/`](./example/)
+Example: [`playground/`](./playground/)
 
 <br></details>
 
@@ -34,14 +48,11 @@ Example: [`example/`](./example/)
 
 ```ts
 // rollup.config.js
-import copy from 'unplugin-cesium/rollup'
+import Cesium from 'unplugin-cesium/rollup'
 
 export default {
   plugins: [
-    copy({
-      src: './node_modules/vue/dist/*',
-      dest: 'vue'
-    }),
+    Cesium({ /* options */ }),
   ],
 }
 ```
@@ -57,10 +68,7 @@ export default {
 module.exports = {
   /* ... */
   plugins: [
-    copy({
-      src: './node_modules/vue/dist/*',
-      dest: 'vue'
-    }),
+    require('unplugin-cesium/webpack')({ /* options */ })
   ]
 }
 ```
@@ -72,14 +80,11 @@ module.exports = {
 
 ```ts
 // nuxt.config.js
-export default {
-  buildModules: [
-    ['unplugin-cesium/nuxt', {
-      src: './node_modules/vue/dist/*',
-      dest: 'vue'
-    }],
+export default defineNuxtConfig({
+  modules: [
+    ['unplugin-cesium/nuxt', { /* options */ }],
   ],
-}
+})
 ```
 
 > This module works for both Nuxt 2 and [Nuxt Vite](https://github.com/nuxt/vite)
@@ -94,12 +99,7 @@ export default {
 module.exports = {
   configureWebpack: {
     plugins: [
-      require('unplugin-cesium/webpack')(
-        {
-          src: './node_modules/vue/dist/*',
-          dest: 'vue'
-        },
-      ),
+      require('unplugin-cesium/webpack')({ /* options */ }),
     ],
   },
 }
@@ -113,15 +113,10 @@ module.exports = {
 ```ts
 // esbuild.config.js
 import { build } from 'esbuild'
-import copy from 'unplugin-cesium/esbuild'
+import Cesium from 'unplugin-cesium/esbuild'
 
 build({
-  plugins: [
-    copy({
-      src: './node_modules/vue/dist/*',
-      dest: 'vue'
-    }),
-  ],
+  plugins: [Cesium()],
 })
 ```
 

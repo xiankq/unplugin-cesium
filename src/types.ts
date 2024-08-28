@@ -1,3 +1,3 @@
-export interface UnpluginCesiumOptions {
-  src: ''
+export interface Options {
+  // define your plugin options here
 }

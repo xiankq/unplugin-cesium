@@ -1,15 +1,15 @@
+import type { UnpluginFactory } from 'unplugin'
 import { createUnplugin } from 'unplugin'
-import unpluginCopy from 'unplugin-copy'
-import type { UnpluginCesiumOptions } from './types'
+import type { Options } from './types'
 
-export default createUnplugin<UnpluginCesiumOptions>((options, meta) => {
-  return [
-    unpluginCopy.raw({ targets: [] }, meta),
-    {
-      buildEnd() {
-      },
-      webpack(compiler) {
-      },
-    },
-  ]
+export const unpluginFactory: UnpluginFactory<Options | undefined> = options => ({
+  name: 'unplugin-cesium',
+  transform(code,id) { 
+    console.log(id);
+    return code.replace('__UNPLUGIN__', `Hello Unplugin! ${options}`)
+  },
 })
+
+export const unplugin = /* #__PURE__ */ createUnplugin(unpluginFactory)
+
+export default unplugin

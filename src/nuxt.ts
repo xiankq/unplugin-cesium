@@ -1,16 +1,25 @@
-import type { UnpluginCesiumOptions } from './types'
-import unplugin from '.'
+import { addVitePlugin, addWebpackPlugin, defineNuxtModule } from '@nuxt/kit'
+import vite from './vite'
+import webpack from './webpack'
+import type { Options } from './types'
+import '@nuxt/schema'
 
-export default function (options: UnpluginCesiumOptions, nuxt: any) {
-  // install webpack plugin
-  nuxt.hook('webpack:config', async (config: any) => {
-    config.plugins = config.plugins || []
-    config.plugins.unshift(unplugin.webpack(options))
-  })
+export interface ModuleOptions extends Options {
 
-  // install vite plugin
-  nuxt.hook('vite:extendConfig', async (config: any) => {
-    config.plugins = config.plugins || []
-    config.plugins.push(unplugin.vite(options))
-  })
 }
+
+export default defineNuxtModule<ModuleOptions>({
+  meta: {
+    name: 'nuxt-unplugin-cesium',
+    configKey: 'unpluginCesium',
+  },
+  defaults: {
+    // ...default options
+  },
+  setup(options, _nuxt) {
+    addVitePlugin(() => vite(options))
+    addWebpackPlugin(() => webpack(options))
+
+    // ...
+  },
+})
