@@ -1,8 +1,8 @@
-import type { Options } from './types'
+import type { UnpluginCesiumOptions } from './types'
 
 import unplugin from '.'
 
-export default (options: Options) => ({
+export default (options: UnpluginCesiumOptions): any => ({
   name: 'unplugin-cesium',
   hooks: {
     'astro:config:setup': async (astro: any) => {

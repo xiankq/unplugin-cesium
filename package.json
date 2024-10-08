@@ -2,7 +2,7 @@
   "name": "unplugin-cesium",
   "type": "module",
   "version": "0.1.0",
-  "packageManager": "pnpm@8.6.12",
+  "packageManager": "pnpm@9.12.1",
   "description": "",
   "license": "MIT",
   "homepage": "https://github.com/xiankq/unplugin-cesium#readme",
@@ -22,47 +22,42 @@
   ],
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
     },
     "./astro": {
-      "types": "./dist/astro.d.ts",
       "import": "./dist/astro.js",
       "require": "./dist/astro.cjs"
     },
     "./rspack": {
-      "types": "./dist/rspack.d.ts",
       "import": "./dist/rspack.js",
       "require": "./dist/rspack.cjs"
     },
     "./vite": {
-      "types": "./dist/vite.d.ts",
       "import": "./dist/vite.js",
       "require": "./dist/vite.cjs"
     },
     "./webpack": {
-      "types": "./dist/webpack.d.ts",
       "import": "./dist/webpack.js",
       "require": "./dist/webpack.cjs"
     },
     "./rollup": {
-      "types": "./dist/rollup.d.ts",
       "import": "./dist/rollup.js",
       "require": "./dist/rollup.cjs"
     },
     "./esbuild": {
-      "types": "./dist/esbuild.d.ts",
       "import": "./dist/esbuild.js",
       "require": "./dist/esbuild.cjs"
     },
     "./nuxt": {
-      "types": "./dist/nuxt.d.ts",
       "import": "./dist/nuxt.js",
       "require": "./dist/nuxt.cjs"
     },
+    "./farm": {
+      "import": "./dist/farm.js",
+      "require": "./dist/farm.cjs"
+    },
     "./types": {
-      "types": "./dist/types.d.ts",
       "import": "./dist/types.js",
       "require": "./dist/types.cjs"
     },
@@ -86,14 +81,17 @@
     "build": "tsup",
     "dev": "tsup --watch src",
     "build:fix": "esno scripts/postbuild.ts",
-    "lint": "eslint .",
-    "play": "npm -C playground run dev",
-    "prepublishOnly": "npm run build",
-    "release": "bumpp && npm publish",
+    "lint": "eslint . --fix",
     "start": "esno src/index.ts",
-    "test": "vitest"
+    "test": "vitest",
+    "taze": "taze -w -r major minor patch",
+    "release": "bumpp -r",
+    "============[CI]==========": "",
+    "prepublish": "npm run build",
+    "publish:ci": "bumpp && npm publish"
   },
   "peerDependencies": {
+    "@farmfe/core": ">=1",
     "@nuxt/kit": "^3",
     "@nuxt/schema": "^3",
     "esbuild": "*",
@@ -102,7 +100,16 @@
     "webpack": "^4 || ^5"
   },
   "peerDependenciesMeta": {
-    "webpack": {
+    "@farmfe/core": {
+      "optional": true
+    },
+    "@nuxt/kit": {
+      "optional": true
+    },
+    "@nuxt/schema": {
+      "optional": true
+    },
+    "esbuild": {
       "optional": true
     },
     "rollup": {
@@ -111,38 +118,36 @@
     "vite": {
       "optional": true
     },
-    "esbuild": {
-      "optional": true
-    },
-    "@nuxt/kit": {
-      "optional": true
-    },
-    "@nuxt/schema": {
+    "webpack": {
       "optional": true
     }
   },
   "dependencies": {
-    "unplugin": "^1.12.1",
-    "unplugin-copy":"^0.1.4",
-    "unplugin-define":"^0.1.2"
+    "@rollup/pluginutils": "^5.1.0",
+    "fast-glob": "^3.3.2",
+    "magic-string": "^0.30.11",
+    "serve-static": "^1.16.2",
+    "unplugin": "^1.14.1"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.25.1",
-    "@nuxt/kit": "^3.12.4",
-    "@nuxt/schema": "^3.12.4",
-    "@types/node": "^22.2.0",
-    "bumpp": "^9.4.2",
+    "@antfu/eslint-config": "^3.7.3",
+    "@nuxt/kit": "^3.13.2",
+    "@nuxt/schema": "^3.13.2",
+    "@types/node": "^22.7.5",
+    "@types/serve-static": "^1.15.7",
+    "bumpp": "^9.6.1",
     "chalk": "^5.3.0",
-    "eslint": "^9.9.0",
-    "esno": "^4.7.0",
+    "eslint": "^9.12.0",
+    "esno": "^4.8.0",
     "fast-glob": "^3.3.2",
-    "nodemon": "^3.1.4",
-    "rimraf": "^6.0.1",
-    "rollup": "^4.20.0",
-    "tsup": "^8.2.4",
-    "typescript": "^5.5.4",
-    "vite": "^5.4.0",
-    "vitest": "^2.0.5",
-    "webpack": "^5.93.0"
+    "nodemon": "^3.1.7",
+    "pnpm": "^9.12.1",
+    "rollup": "^4.24.0",
+    "taze": "^0.17.2",
+    "tsup": "^8.3.0",
+    "typescript": "^5.6.2",
+    "vite": "^5.4.8",
+    "vitest": "^2.1.2",
+    "webpack": "^5.95.0"
   }
 }

@@ -1,3 +1,5 @@
-import 'https://unpkg.com/cesium@1.120.0/Build/Cesium/Widgets/widgets.css'
+import * as Cesium from 'cesium'
+import 'cesium/Build/Cesium/Widgets/widgets.css'
 
-document.getElementById('app')!.innerHTML = '__UNPLUGIN__'
+// eslint-disable-next-line unused-imports/no-unused-vars
+const viewer = new Cesium.Viewer('app')

@@ -1,10 +1,21 @@
 {
+  "type": "module",
   "private": true,
   "scripts": {
-    "dev": "nodemon -w '../src/**/*.ts' -e .ts -x vite"
+    "dev:vite": "vite",
+    "dev:rsbuild": "rsbuild dev",
+    "build:vite": "vite build",
+    "build:rsbuild": "rsbuild build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "cesium": "^1.122.0"
   },
   "devDependencies": {
-    "vite": "^5.4.0",
-    "vite-plugin-inspect": "^0.8.5"
+    "@rsbuild/core": "^1.0.10",
+    "typescript": "^5.6.2",
+    "unplugin-cesium": "workspace:*",
+    "vite": "^5.4.8",
+    "vite-plugin-inspect": "^0.8.7"
   }
 }

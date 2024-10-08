@@ -2,7 +2,7 @@
 
 [![NPM version](https://img.shields.io/npm/v/unplugin-cesium?color=a1b858&label=)](https://www.npmjs.com/package/unplugin-cesium)
 
-Cesium template for [unplugin](https://github.com/unjs/unplugin).
+Starter template for [unplugin](https://github.com/unjs/unplugin).
 
 ## Template Usage
 
@@ -30,11 +30,11 @@ npm i unplugin-cesium
 
 ```ts
 // vite.config.ts
-import Cesium from 'unplugin-cesium/vite'
+import Starter from 'unplugin-cesium/vite'
 
 export default defineConfig({
   plugins: [
-    Cesium({ /* options */ }),
+    Starter({ /* options */ }),
   ],
 })
 ```
@@ -48,17 +48,16 @@ Example: [`playground/`](./playground/)
 
 ```ts
 // rollup.config.js
-import Cesium from 'unplugin-cesium/rollup'
+import Starter from 'unplugin-cesium/rollup'
 
 export default {
   plugins: [
-    Cesium({ /* options */ }),
+    Starter({ /* options */ }),
   ],
 }
 ```
 
 <br></details>
-
 
 <details>
 <summary>Webpack</summary><br>
@@ -113,10 +112,10 @@ module.exports = {
 ```ts
 // esbuild.config.js
 import { build } from 'esbuild'
-import Cesium from 'unplugin-cesium/esbuild'
+import Starter from 'unplugin-cesium/esbuild'
 
 build({
-  plugins: [Cesium()],
+  plugins: [Starter()],
 })
 ```
 
