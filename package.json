@@ -87,7 +87,7 @@
     "release": "bumpp -r",
     "============[CI]==========": "",
     "prepublish": "npm run build",
-    "publish:ci": "pnpm publish -r --no-git-checks --access public"
+    "publish:ci": "npm publish -r --no-git-checks --access public"
   },
   "peerDependencies": {
     "@farmfe/core": ">=1",
