@@ -2,8 +2,7 @@
   "name": "unplugin-cesium",
   "type": "module",
   "version": "0.1.0",
-  "packageManager": "pnpm@9.12.1",
-  "description": "",
+  "description": "Quickly integrate CesiumJS into various bundlers",
   "license": "MIT",
   "homepage": "https://github.com/xiankq/unplugin-cesium#readme",
   "repository": {
@@ -123,11 +122,9 @@
     }
   },
   "dependencies": {
-    "@rollup/pluginutils": "^5.1.0",
-    "fast-glob": "^3.3.2",
     "magic-string": "^0.30.11",
-    "serve-static": "^1.16.2",
-    "unplugin": "^1.14.1"
+    "unplugin": "^1.14.1",
+    "unplugin-copy": "^0.1.8"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^3.7.3",
@@ -135,17 +132,16 @@
     "@nuxt/schema": "^3.13.2",
     "@types/node": "^22.7.5",
     "@types/serve-static": "^1.15.7",
-    "bumpp": "^9.6.1",
+    "bumpp": "^9.7.1",
     "chalk": "^5.3.0",
     "eslint": "^9.12.0",
     "esno": "^4.8.0",
     "fast-glob": "^3.3.2",
     "nodemon": "^3.1.7",
-    "pnpm": "^9.12.1",
     "rollup": "^4.24.0",
     "taze": "^0.17.2",
     "tsup": "^8.3.0",
-    "typescript": "^5.6.2",
+    "typescript": "^5.6.3",
     "vite": "^5.4.8",
     "vitest": "^2.1.2",
     "webpack": "^5.95.0"
