@@ -1,9 +1,15 @@
 import { defineConfig } from '@rsbuild/core'
-import UnpluginCesium from 'unplugin-cesium/rspack'
+import UnpluginCesium from '../src/rspack'
 
 export default defineConfig({
   html: {
     template: './index.rsbuild.html',
+  },
+  dev: {
+    assetPrefix: '/unplugin',
+  },
+  server: {
+    base: '/unplugin',
   },
   source: {
     entry: {
@@ -13,7 +19,9 @@ export default defineConfig({
   tools: {
     rspack: {
       plugins: [
-        UnpluginCesium(),
+        UnpluginCesium({
+          base: '/unplugin',
+        }),
       ],
     },
   },

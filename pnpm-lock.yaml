@@ -21,8 +21,8 @@ importers:
         specifier: ^1.14.1
         version: 1.14.1(webpack-sources@3.2.3)
       unplugin-copy:
-        specifier: ^0.1.8
-        version: 0.1.8(@nuxt/kit@3.13.2(rollup@4.24.0)(webpack-sources@3.2.3))(@nuxt/schema@3.13.2(rollup@4.24.0)(webpack-sources@3.2.3))(esbuild@0.23.1)(rollup@4.24.0)(vite@5.4.8(@types/node@22.7.5)(terser@5.31.6))(webpack-sources@3.2.3)(webpack@5.95.0(esbuild@0.23.1))
+        specifier: ^1.0.0
+        version: 1.0.0(@nuxt/kit@3.13.2(rollup@4.24.0)(webpack-sources@3.2.3))(@nuxt/schema@3.13.2(rollup@4.24.0)(webpack-sources@3.2.3))(esbuild@0.23.1)(rollup@4.24.0)(vite@5.4.8(@types/node@22.7.5)(terser@5.31.6))(webpack-sources@3.2.3)(webpack@5.95.0(esbuild@0.23.1))
     devDependencies:
       '@antfu/eslint-config':
         specifier: ^3.7.3
@@ -3717,8 +3717,8 @@ packages:
     resolution: {integrity: sha512-hAZsKq7Yy11Zu1DE0OzWjw7nnLZmJZYTDZZyEFHZdUhV8FkH5MCfoU1XMaxXovpyW5nq5scPqq0ZDP9Zyl04oQ==}
     engines: {node: '>= 10.0.0'}
 
-  unplugin-copy@0.1.8:
-    resolution: {integrity: sha512-05huNgr0jKhUKV1daOnSsMLZO5vWS4MbNWt2cILMBJyUaRwJ3TRWTgX/Z9ZAEA7Aa6XsZDjH9s2h/D3FGs2jZw==}
+  unplugin-copy@1.0.0:
+    resolution: {integrity: sha512-2eFDtDr4sqlqYJHyg8hvmFj7rjDHL+jnN8DZNtTCgIjILFkfUtt6eF8flgXlUJqVTrpf0M9AaiMWTrIalIcV5Q==}
     peerDependencies:
       '@nuxt/kit': ^3
       '@nuxt/schema': ^3
@@ -7897,7 +7897,7 @@ snapshots:
 
   universalify@2.0.0: {}
 
-  unplugin-copy@0.1.8(@nuxt/kit@3.13.2(rollup@4.24.0)(webpack-sources@3.2.3))(@nuxt/schema@3.13.2(rollup@4.24.0)(webpack-sources@3.2.3))(esbuild@0.23.1)(rollup@4.24.0)(vite@5.4.8(@types/node@22.7.5)(terser@5.31.6))(webpack-sources@3.2.3)(webpack@5.95.0(esbuild@0.23.1)):
+  unplugin-copy@1.0.0(@nuxt/kit@3.13.2(rollup@4.24.0)(webpack-sources@3.2.3))(@nuxt/schema@3.13.2(rollup@4.24.0)(webpack-sources@3.2.3))(esbuild@0.23.1)(rollup@4.24.0)(vite@5.4.8(@types/node@22.7.5)(terser@5.31.6))(webpack-sources@3.2.3)(webpack@5.95.0(esbuild@0.23.1)):
     dependencies:
       fast-glob: 3.3.2
       serve-static: 1.16.2

@@ -124,7 +124,7 @@
   "dependencies": {
     "magic-string": "^0.30.11",
     "unplugin": "^1.14.1",
-    "unplugin-copy": "^0.1.8"
+    "unplugin-copy": "^1.0.0"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^3.7.3",

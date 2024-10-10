@@ -1,9 +1,11 @@
-import UnpluginCesium from 'unplugin-cesium/vite'
 import { defineConfig } from 'vite'
-import Inspect from 'vite-plugin-inspect'
+import UnpluginCesium from '../src/vite'
 
 export default defineConfig({
+  base: '/unplugin',
   plugins: [
-    UnpluginCesium(),
+    UnpluginCesium({
+      base: '/unplugin',
+    }),
   ],
 })

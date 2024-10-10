@@ -1,14 +1,20 @@
 export interface UnpluginCesiumOptions {
   /**
-   * This is the base url for static files that CesiumJS needs to load.
-   * 如果已经为这些静态文件配置了CDN地址，那也可以直接指定为CDN地址，并将`copyStaicFiles`设置成 `false`。
+   * This is the base URL for static files that CesiumJS needs to load.
+   * If you have configured a CDN URL for these static files, you can also directly specify the CDN URL and set `copyStaticFiles` to `false`.
    * @default '/cesiumStatic'
    */
   cesiumBaseUrl?: string
 
   /**
-   * 是否拷贝静态文件到`cesiumBaseUrl`目录下
+   * If you have set a similar `base` in vite or `publicPath` in webpack, you also need to set the same parameter here.
+   * @default '/'
+   */
+  base?: string
+
+  /**
+   * Whether to copy static files to the `cesiumBaseUrl` directory.
    * @default true
    */
-  copyStaicFiles?: boolean
+  copyStaticFiles?: boolean
 }
