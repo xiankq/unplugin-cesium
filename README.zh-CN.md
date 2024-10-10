@@ -2,14 +2,14 @@
 
 [English](README.md) | [简体中文](README-zh_CN.md)
 
-Quickly integrate CesiumJS into various bundlers.
+将CesiumJS快速集成到各种bundler中。
 
-## Features
-- ✨ Support Vite, Webpack, Vue CLI, Rspack, Rollup, esbuild and more, powered by unplugin.
-- ⚡️ No need to wait for Cesium static files to be copied in Vite development mode
-- 🦾 Full TypeScript support.
+## 功能
+- ✨ 支持Vite、Webpack、Vue CLI、Rspack、Rollup、esbuild等，由unplugin提供支持。
+- ⚡️ 在Vite开发模式下，无需等待Cesium静态文件被复制
+- 🦾 完全支持TypeScript。
 
-## Install
+## 安装
 
 ```bash
 # npm
@@ -21,7 +21,7 @@ pnpm i unplugin-cesium -D
 # yarn
 yarn add unplugin-cesium -D
 ```
-## Example
+## 示例
 
 ### Vite
 ```ts
@@ -73,24 +73,24 @@ export default defineConfig({
 })
 ```
 
-## Options
+## 选项
 ```ts
 export interface UnpluginCesiumOptions {
   /**
-   * This is the base URL for static files that CesiumJS needs to load.
-   * If you have configured a CDN URL for these static files, you can also directly specify the CDN URL and set `copyStaticFiles` to `false`.
+   * 这是CesiumJS需要加载的静态文件的基础URL。
+   * 如果你已经为这些静态文件配置了CDN URL，也可以直接指定CDN URL，并将`copyStaticFiles`设置为`false`。
    * @default '/cesiumStatic'
    */
   cesiumBaseUrl?: string
 
   /**
-   * If you have set a similar `base` in vite or `publicPath` in webpack, you also need to set the same parameter here.
+   * 如果你在vite中设置了类似的`base`或在webpack中设置了`publicPath`，你也需要在这里设置相同的参数。
    * @default '/'
    */
   base?: string
 
   /**
-   * Whether to copy static files to the `cesiumBaseUrl` directory.
+   * 是否将静态文件复制到`cesiumBaseUrl`目录。
    * @default true
    */
   copyStaticFiles?: boolean
