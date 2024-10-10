@@ -21,8 +21,8 @@ importers:
         specifier: ^1.14.1
         version: 1.14.1(webpack-sources@3.2.3)
       unplugin-copy:
-        specifier: ^1.0.0
-        version: 1.0.0(@nuxt/kit@3.13.2(rollup@4.24.0)(webpack-sources@3.2.3))(@nuxt/schema@3.13.2(rollup@4.24.0)(webpack-sources@3.2.3))(esbuild@0.23.1)(rollup@4.24.0)(vite@5.4.8(@types/node@22.7.5)(terser@5.31.6))(webpack-sources@3.2.3)(webpack@5.95.0(esbuild@0.23.1))
+        specifier: ^1.0.1
+        version: 1.0.1(@nuxt/kit@3.13.2(rollup@4.24.0)(webpack-sources@3.2.3))(@nuxt/schema@3.13.2(rollup@4.24.0)(webpack-sources@3.2.3))(esbuild@0.23.1)(rollup@4.24.0)(vite@5.4.8(@types/node@22.7.5)(terser@5.31.6))(webpack-sources@3.2.3)(webpack@5.95.0(esbuild@0.23.1))
     devDependencies:
       '@antfu/eslint-config':
         specifier: ^3.7.3
@@ -1047,6 +1047,9 @@ packages:
   '@types/estree@1.0.6':
     resolution: {integrity: sha512-AYnb1nQyY49te+VRAVgmzfcgjYS91mY5P0TKUDCLEM+gNnA+3T6rWITXRLYCpahpqSQbN5cE+gHpnPyXjHWxcw==}
 
+  '@types/fs-extra@11.0.4':
+    resolution: {integrity: sha512-yTbItCNreRooED33qjunPthRcSjERP1r4MqCZc7wv0u2sUkzTFp45tgUfS5+r7FrZPdmCCNflLhVSP/o+SemsQ==}
+
   '@types/http-errors@2.0.4':
     resolution: {integrity: sha512-D0CFMMtydbJAegzOyHjtiKPLlvnm3iTZyZRSZoLq2mRhDdmLfIWOCYPfQJ4cu2erKghU++QvjcUjp/5h7hESpA==}
 
@@ -1058,6 +1061,9 @@ packages:
 
   '@types/json-schema@7.0.15':
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
+
+  '@types/jsonfile@6.1.4':
+    resolution: {integrity: sha512-D5qGUYwjvnNNextdU59/+fI+spnwtTFmyQP0h+PfIOSkNfpU6AOICUOkm4i0OnSk+NyjdPJrxCDro0sJsWlRpQ==}
 
   '@types/mdast@4.0.4':
     resolution: {integrity: sha512-kGaNbPh1k7AFzgpud/gMdvIm5xuECykRR+JnWKQno9TAXVa6WIVCGTPvYGekIDL4uwCZQSYbUxNBSb1aUo79oA==}
@@ -3717,8 +3723,8 @@ packages:
     resolution: {integrity: sha512-hAZsKq7Yy11Zu1DE0OzWjw7nnLZmJZYTDZZyEFHZdUhV8FkH5MCfoU1XMaxXovpyW5nq5scPqq0ZDP9Zyl04oQ==}
     engines: {node: '>= 10.0.0'}
 
-  unplugin-copy@1.0.0:
-    resolution: {integrity: sha512-2eFDtDr4sqlqYJHyg8hvmFj7rjDHL+jnN8DZNtTCgIjILFkfUtt6eF8flgXlUJqVTrpf0M9AaiMWTrIalIcV5Q==}
+  unplugin-copy@1.0.1:
+    resolution: {integrity: sha512-r+JDh+fBfJHTn3JxOjgAs2GqOQ9Ia+JjjtcDlzbm6BcIBqj1Tj7ZyTpvyVHVgbxI+Kt9oKMaX5NGOmIGjKEXkw==}
     peerDependencies:
       '@nuxt/kit': ^3
       '@nuxt/schema': ^3
@@ -4951,6 +4957,11 @@ snapshots:
 
   '@types/estree@1.0.6': {}
 
+  '@types/fs-extra@11.0.4':
+    dependencies:
+      '@types/jsonfile': 6.1.4
+      '@types/node': 22.7.5
+
   '@types/http-errors@2.0.4': {}
 
   '@types/http-proxy@1.17.15':
@@ -4960,6 +4971,10 @@ snapshots:
   '@types/json-schema@7.0.12': {}
 
   '@types/json-schema@7.0.15': {}
+
+  '@types/jsonfile@6.1.4':
+    dependencies:
+      '@types/node': 22.7.5
 
   '@types/mdast@4.0.4':
     dependencies:
@@ -7897,9 +7912,11 @@ snapshots:
 
   universalify@2.0.0: {}
 
-  unplugin-copy@1.0.0(@nuxt/kit@3.13.2(rollup@4.24.0)(webpack-sources@3.2.3))(@nuxt/schema@3.13.2(rollup@4.24.0)(webpack-sources@3.2.3))(esbuild@0.23.1)(rollup@4.24.0)(vite@5.4.8(@types/node@22.7.5)(terser@5.31.6))(webpack-sources@3.2.3)(webpack@5.95.0(esbuild@0.23.1)):
+  unplugin-copy@1.0.1(@nuxt/kit@3.13.2(rollup@4.24.0)(webpack-sources@3.2.3))(@nuxt/schema@3.13.2(rollup@4.24.0)(webpack-sources@3.2.3))(esbuild@0.23.1)(rollup@4.24.0)(vite@5.4.8(@types/node@22.7.5)(terser@5.31.6))(webpack-sources@3.2.3)(webpack@5.95.0(esbuild@0.23.1)):
     dependencies:
+      '@types/fs-extra': 11.0.4
       fast-glob: 3.3.2
+      fs-extra: 11.2.0
       serve-static: 1.16.2
       unplugin: 1.14.1(webpack-sources@3.2.3)
     optionalDependencies:
