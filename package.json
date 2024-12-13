@@ -96,7 +96,7 @@
     "esbuild": "*",
     "rollup": "^3",
     "vite": ">=3",
-    "webpack": "^4 || ^5"
+    "webpack": ">=5"
   },
   "peerDependenciesMeta": {
     "@farmfe/core": {
@@ -124,7 +124,7 @@
   "dependencies": {
     "magic-string": "^0.30.11",
     "unplugin": "^1.14.1",
-    "unplugin-copy": "^1.0.1"
+    "unplugin-copy": "^2.0.0"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^3.7.3",
