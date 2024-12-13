@@ -1,7 +1,7 @@
 {
   "name": "unplugin-cesium",
   "type": "module",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "description": "Quickly integrate CesiumJS into various bundlers",
   "license": "MIT",
   "homepage": "https://github.com/xiankq/unplugin-cesium#readme",
