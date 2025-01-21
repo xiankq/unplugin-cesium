@@ -14,8 +14,7 @@ export const unpluginFactory: UnpluginFactory<UnpluginCesiumOptions | undefined,
   } = options
 
   const baseURL = normalizePosixPath(path.join('/', cesiumBaseUrl))
-  const CESIUM_BASE_URL = copyStaticFiles ? normalizePosixPath(path.join('/', copyStaticFiles ? base : '', baseURL)) : cesiumBaseUrl
-
+  const CESIUM_BASE_URL = copyStaticFiles ? normalizePosixPath(path.join(copyStaticFiles ? base : '', baseURL)) : cesiumBaseUrl
   return [
     ...!copyStaticFiles
       ? []
