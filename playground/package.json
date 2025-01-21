@@ -9,12 +9,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "cesium": "^1.122.0"
+    "cesium": "^1.125.0"
   },
   "devDependencies": {
-    "@rsbuild/core": "^1.0.11",
-    "typescript": "^5.6.3",
+    "@rsbuild/core": "^1.1.14",
+    "typescript": "^5.7.3",
     "unplugin-cesium": "workspace:*",
-    "vite": "^5.4.8"
+    "vite": "^5.4.13"
   }
 }

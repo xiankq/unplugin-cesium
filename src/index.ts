@@ -19,25 +19,25 @@ export const unpluginFactory: UnpluginFactory<UnpluginCesiumOptions | undefined,
     ...!copyStaticFiles
       ? []
       : UnpluginCopy.raw({
-        targets: [
-          {
-            src: `node_modules/cesium/Build/Cesium/Workers/**`,
-            dest: `${cesiumBaseUrl}/Workers`,
-          },
-          {
-            src: `node_modules/cesium/Build/Cesium/ThirdParty/**`,
-            dest: `${cesiumBaseUrl}/ThirdParty`,
-          },
-          {
-            src: `node_modules/cesium/Build/Cesium/Assets/**`,
-            dest: `${cesiumBaseUrl}/Assets`,
-          },
-          {
-            src: `node_modules/cesium/Build/Cesium/Widgets/**`,
-            dest: `${cesiumBaseUrl}/Widgets`,
-          },
-        ],
-      }, meta),
+          targets: [
+            {
+              src: `node_modules/cesium/Build/Cesium/Workers/**`,
+              dest: `${cesiumBaseUrl}/Workers`,
+            },
+            {
+              src: `node_modules/cesium/Build/Cesium/ThirdParty/**`,
+              dest: `${cesiumBaseUrl}/ThirdParty`,
+            },
+            {
+              src: `node_modules/cesium/Build/Cesium/Assets/**`,
+              dest: `${cesiumBaseUrl}/Assets`,
+            },
+            {
+              src: `node_modules/cesium/Build/Cesium/Widgets/**`,
+              dest: `${cesiumBaseUrl}/Widgets`,
+            },
+          ],
+        }, meta),
     {
       enforce: 'pre',
       name: 'unplugin-cesium',
