@@ -1,7 +1,7 @@
 {
   "name": "unplugin-cesium",
   "type": "module",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Quickly integrate CesiumJS into various bundlers",
   "license": "MIT",
   "homepage": "https://github.com/xiankq/unplugin-cesium#readme",
@@ -13,6 +13,7 @@
     "url": "https://github.com/xiankq/unplugin-cesium/issues"
   },
   "keywords": [
+    "cesium",
     "unplugin",
     "vite",
     "webpack",
